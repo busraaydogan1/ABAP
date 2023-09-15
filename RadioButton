@@ -1,4 +1,7 @@
-"we are using the USER-COMMAND  addition when you declare the relevant parameters
+*********************************************************
+"we are using the USER-COMMAND  addition when you declare
+the relevant parameters
+*********************************************************
 
 SELECTION-SCREEN BEGIN OF BLOCK B11 WITH FRAME TITLE TEXT-001.
 PARAMETERS : P_RAD1 RADIOBUTTON GROUP GR1 USER-COMMAND GR1,
@@ -11,3 +14,24 @@ SELECTION-SCREEN BEGIN OF BLOCK B12 WITH FRAME TITLE TEXT-001.
 PARAMETERS : P_RAD3 RADIOBUTTON GROUP GR2,
              P_RAD4 RADIOBUTTON GROUP GR2.
 SELECTION-SCREEN END OF BLOCK B12.
+
+*********************************************************
+"to write all radio buttons on the same line
+*********************************************************
+
+SELECTION-SCREEN BEGIN OF BLOCK blk2 WITH FRAME TITLE TEXT-s01.
+  selection-SCREEN BEGIN OF LINE.
+    PARAMETERS: p_rad1 RADIOBUTTON GROUP grp1.
+    selection-SCREEN COMMENT 10(15) FOR FIELD p_rad1.
+    PARAMETERS: p_rad2 RADIOBUTTON GROUP grp1.
+    selection-SCREEN COMMENT 30(15) FOR FIELD p_rad2.
+    PARAMETERS: p_rad3 RADIOBUTTON GROUP grp1.
+    selection-SCREEN COMMENT 50(15) FOR FIELD p_rad3.
+    PARAMETERS: p_rad4 RADIOBUTTON GROUP grp1.
+    selection-SCREEN COMMENT 70(15) for FIELD p_rad4.
+  selection-SCREEN END OF LINE.
+SELECTION-SCREEN END OF BLOCK blk2.
+
+*********************************************************
+"
+*********************************************************
