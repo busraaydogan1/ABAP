@@ -103,12 +103,19 @@ SELECTION-SCREEN END OF BLOCK bl1.
 PARAMETERS: param like vbak-vbeln MATCHCODE OBJECT zsh.
 
 *********************************************************
-"
+"lower case
+*********************************************************
+PARAMETERS: p_text(100) LOWER CASE DEFAULT 'X'. 
+
+*********************************************************
+"Add blank line to SAP report selection screen
 *********************************************************
 
-
-
-
+SELECTION-SCREEN BEGIN OF BLOCK skip WITH FRAME TITLE text-s01.
+  parameters: p_tinput like p2001-awart.
+  selection-screen SKIP.
+  parameters: p_rinput like p2001-umsch.
+SELECTION-SCREEN END OF BLOCK skip.
 
 
 
