@@ -1,0 +1,7 @@
+*********************************************************
+"The information we print with QUICKINFO appears when 
+the mouse cursor hovers over it. It has a function similar
+to tooltips in HTML.
+*********************************************************
+
+WRITE: sy-datum QUICKINFO 'Today's Date information',/,/, sy-uzeit QUICKINFO 'System Time'.
